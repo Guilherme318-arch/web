@@ -1,0 +1,116 @@
+/*comentario css: variaveis css globais */
+:root {
+
+    --cor-neve: #fdfdfdc7;
+    --cor-verdeclaro: #efefef;
+    --cor-verde-transparente: #e3fbe380;
+    --cor-verde-musgo: #06b43a6b;
+    --cor-verde-limao: limegreen;
+    --cor-preto: #000;
+    --cor-texto: #212121;
+    --cor-branco: #fdfdfd;
+    --cor-cinza: #aaaa;
+    --cinza-escuro: rgb(0, 0, 0);
+    --cinza-claro: #dcdcdc;
+    --cor-dourado: #fefefe;
+
+    --altura-titulo: 2em;
+    --altura-subtitulo: 1.5em;
+}
+
+body {
+    background-color: var(--cor-branco);
+}
+
+header {
+
+    background-color: var(--cor-verde-musgo);
+    padding-block: 16px;
+    padding-inline: 16px;
+
+}
+
+nav {
+    /*background-color: var(--cor-branco);*/
+    height: 175px;
+    max-width: 1200px;
+    margin-inline: auto;
+    /*layout flexbox: padrão=alinhamento horinzontal=row*/
+    display: flex;
+    /* divide o espaçamento vertical*/
+    justify-content: space-between;
+    /*divide o espaçamento*/
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    /*padrão row=horinzontal*/
+    gap: 32px;
+    /*espaço entre os item da lista*/
+    list-style: none;
+    /*remove o marcador de agua*/
+    user-select: none;
+    /* nao permite selecionar texto*/
+
+}
+
+/*configura o link do menu*/
+nav ul a {
+    color: var(--cor-texto);
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    /*remove o undercore do link*/
+    text-transform: uppercase;
+    /*transforma tudo em maisculo*/
+
+}
+
+nav ul a:hover {
+
+    color: var(--cinza-escuro);
+    text-decoration: underline;
+}
+
+.banner {
+    width: 100vw;
+
+}
+
+
+
+footer {
+    text-align: center;
+    /*imagem de fundo que sera repetida*/
+    background: url(../img/bg.png);
+    padding-block: 16px;
+    /*top+buttom*/
+}
+
+footer p {
+    color: var(--cor-branco);
+    font-size: 13px;
+    margin-top: 16px;
+    cursor: default;
+    user-select: none;
+
+}
+
+@media only screen and (max-width: 800px) {
+    nav {
+        justify-content: right;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 8px;
+        left: 8px;
+        flex-direction: column;
+        gap: 8px;
+        background-color: rgb(255, 145, 0);
+        padding: 5px;
+        border: 1px solid var(--cor-verdeclaro);
+        border-radius: 10px;
+    }
+}

@@ -1,0 +1,160 @@
+.section-empresa {
+    max-width: 940px;
+    margin-inline: auto;
+    text-align: justify;
+    padding-top: 2em;
+    padding-inline: 1em;
+    user-select: none;
+}
+
+.section-empresa h3 {
+    text-align: center;
+    font-size: var(--altura-titulo);
+    margin: 0 0 1em;
+    color: blue
+}
+
+.section-empresa h3::first-letter {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.section-empresa p {
+    margin: 0 0 1em;
+    line-height: 1.3em;
+
+}
+
+.section-empresa p span {
+    margin-inline: 2em;
+}
+
+.section-empresa p strong {
+    font-weight: bold;
+    color: rgb(196, 4, 4);
+}
+
+.section-empresa p em {
+    font-style: italic;
+    font-size: 1.3em;
+}
+
+
+
+
+
+/*-------------------------------------------------*/
+
+
+
+.section-produtos {
+    display: flex;
+    flex-direction: column;
+    max-width: 940px;
+    margin-inline: auto;
+
+    margin-bottom: 10px;
+    padding-top: 2em;
+    padding-inline: 1em;
+    user-select: none;
+}
+
+.section-produtos h3 {
+    margin-inline: auto;
+    margin-bottom: 1em;
+    font-size: var(--altura-subtitulo);
+}
+
+.div-produtos {
+    display: flex;
+    /*alinhamento padrao igual a row*/
+    justify-content: space-between;
+
+}
+
+.div-produtos ul {
+    width: 135px;
+    font-style: italic;
+    line-height: 2.6em;
+}
+
+.div-produtos li::before {
+    content: "☘️";
+    /*emogipedia.org before e after pseudo-elementos*/
+    font-size: 0, 9em;
+    margin-right: 0.5em;
+}
+
+/*
+****pseudo-classe*****
+first-child
+last-child
+nth-child(2)somente o segundo filho
+nth-child(2n)=todos os filhos
+nth-child(even)=todos os filhos pares
+nth-child(odd)=todos os filhos pares
+nth-child(2n+1)=todos os filhos impar( pula 1)*/
+.div-produtos li:nth-child(2n+1) {
+    font-weight: bold;
+}
+
+.div-produtos li {
+    transition: 0.5s;
+}
+
+.div-produtos li:hover {
+    font-size: 1.1em;
+}
+
+.section-produtos img {
+    width: 36%;
+    opacity: 1;
+    transition: 1s;
+    box-shadow: 8px 8px 8px rgb(148, 136, 136);
+}
+
+.section-produtos img:hover {
+    opacity: 0.7
+}
+
+.video {
+    width: 320px;
+    height: 220px;
+    margin: 10px;
+}
+
+/*-----------------------------------------------------*/
+
+
+.section-mapa {
+    border: 1px solid var(--cor-cinza);
+    height: 35vh;
+
+}
+
+/*------------------media-query----------------------------*/
+
+@media only screen and (max-width: 800px) {
+    .div-produtos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-produtos ul {
+        line-height: 1.5em;
+
+    }
+
+    .section-produtos img {
+
+        width: 70%;
+        margin-bottom: 20px;
+    }
+
+    .video {
+        width: 70%;
+        height: 300px;
+        margin-right: 0;
+    }
+}

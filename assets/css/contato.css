@@ -1,0 +1,139 @@
+.painel {
+    background-color: rgb(0, 0, 0);
+    height: 40vh;
+}
+
+/*-------------------------------------*/
+
+
+.conteudo {
+    width: 600px;
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    color: white;
+    cursor: default;
+    user-select: none;
+    z-index: 0;
+}
+
+/*http://mobileinputtypes.com*/
+/*----------------------------------------*/
+.conteudo h2 {
+    display: inline;
+    /*pega somente o espaço necessario*/
+    font-size: 32px;
+    font-weight: bold;
+    border-bottom: 3px solid orange;
+}
+
+.conteudo p {
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 1.5em;
+    margin-bottom: 30px;
+}
+
+
+.conteudo a {
+    background-color: rgb(230, 230, 0);
+    padding: 15px;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+.conteudo:hover {
+    background-color: rgba(11, 110, 2, 0.685);
+    transition: 0.5s;
+    padding: 1.1em;
+}
+
+.container {
+    width: 800px;
+    margin-inline: auto;
+    display: flex;
+}
+
+form {
+    width: 100%;
+    padding: 40px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 12px 12px 12px rgb(108, 119, 97);
+    background-color: white;
+    margin: -60px 0 0 40px -40px;
+    z-index: 1;
+}
+
+/*padrao de label r input inline (ocupa somente o espaço nele*/
+form label,
+legend {
+    display: block;
+    /* muda de inline  para block --> quebra a linha  */
+    font-size: 22px;
+    color: rgb(5, 5, 75);
+    margin: 10px 0 10px 10px;
+}
+
+form > input, textarea {
+    background-color: rgb(27, 50, 51);
+    min-width: 95%;
+    font-size: 22px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid blueviolet;
+    border-radius: 10px;
+    outline-color: orangered;
+}
+
+form > textarea {
+    max-width: 95%;
+    min-height: 100px;
+    max-height: 300px;
+}
+
+form > fieldset {
+    /*margem vetical top + buttom*/
+    margin-block: 20px;
+
+}
+
+form > fieldset select {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/*seleciona label contando elementos a partir do final de form (last +ultimo*/
+form > label:nth-last-child(2) {
+    margin-block: 20px;
+
+}
+
+form> button{
+    width: 35%;
+    padding: 15px;
+    margin-left: 12px;
+    background: yellowgreen;
+color: aqua;
+border: none;
+border-radius: 5px;
+font-size: 18px;
+
+
+font-weight: bold;
+cursor: pointer;
+transition: 1s all;
+
+}
+
+form > button :hover{
+    background-color: gold;
+  /*aumenta o tamanho em 20%*/
+
+    transform: scale(1.2);
+
+}
