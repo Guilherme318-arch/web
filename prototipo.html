@@ -1,0 +1,90 @@
+<html>
+
+
+<head>
+
+    <script>
+
+
+
+        //prototype no javascipt e um objeto no qual novos objetos herdam propriedades e metodos    
+
+
+        //funcao construtora
+        function Pessoa(nome, idade) {
+
+            this.nome = nome
+            this.idade = idade
+
+
+        }
+
+        Pessoa.prototype.saudacao = function () {
+
+
+            return `ola meu nome e ${this.nome}, idade: ${this.idade}`
+
+
+
+        }
+
+
+
+        const joao = new Pessoa('Joao', 30)
+        console.log(joao.saudacao())
+
+        //Funcao construtura  este e o prototipo do objeto fusca
+        function Carro(modelo) {
+
+            this.modelo = modelo
+
+
+
+        }
+
+        //modificando o prototipo da funcao construtura
+        Carro.prototype.velocidade = 0
+        Carro.prototype.acelerar = function () {
+
+            this.velocidade += 10
+            console.log(`${this.modelo}acelerou para${this.velocidade}km/h`)
+        }
+
+
+        //cria um objeto a partir do prototipo
+        const fusca = new Carro('Fusca')
+        fusca.placa = 'AXX-1234'  //essa propriedade exsite apenas no objeto fusca
+        fusca.acelerar()
+
+
+
+        //cria outro objeto a partir do prototipo
+        const porche = new Carro('Porche')
+        porche.acelerar()
+
+        //para acessar o prototipo do Objeto
+        console.log(fusca.__proto__)
+
+        //porem o javascipt recomendar usar:
+
+        console.log(Object.getPrototypeOf(fusca))
+
+
+
+
+    </script>
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h2>Metodos herdados de objetos</h2>
+
+    <script>
+
+        const pessoa = {
+            nome: 'Maria',
+            idade: 25,
+
+        }
+
+
+        //imprime o objeto
+        console.log(pessoa)
+
+        //usa o metodo toString() herdado do Object
+        //mostra uma representação do objeto  em formato texto
+
+        console.log(pessoa.toString())
+
+        //aqui vamos sobreescrever o metodo do toString()herdado do Object
+
+
+        const carro = {
+
+
+            marca: 'Toyota',
+            modelo: 'Corola',
+            toString() {
+
+
+                return `${this.marca} ${this.modelo}`
+
+            }
+
+        }
+
+        console.log(carro.toString())
+
+        //exemplo
+        const produto = {
+
+
+            id: 0,
+            descricao: 'Tv Samsung',
+            preco: 199.90,
+
+            toString() {
+
+
+                return `ID: ${this.id} \t\tDescriçao: ${this.descricao} \t\tPreço ${this.preco}`
+
+            }
+
+        }
+
+        console.log(produto.toString())
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

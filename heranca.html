@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+
+<body>
+    <h2>Herança Prototipica</h2>
+
+    <script>
+
+        //esse e o objeto prototipo cujas propriedades e o metodos
+        //seram herdados pelos objetos gato e cão
+
+        const animal = {
+
+            tipo: 'Mamifero',
+            comer: function () {
+
+
+                console.log('Animal comendo...')
+
+
+
+
+            }
+
+
+
+        }
+
+        //cria um objeto gato a partir do prototipo animal
+
+        const gato = Object.create(animal)
+        //essa funcao do gato e
+
+        gato.miar = function () {
+
+
+            console.log('Gato miando: Miau Miau')
+
+        }
+
+        console.log(gato.tipo)     //Mamifero
+        gato.comer()               //Animal comendo
+        gato.miar()                //Gato latindo: 'Miau Miau'
+
+
+        //cria um prototipo a partir do prototipo animal
+
+        const cao = Object.create(animal)
+        cao.comer()
+        console.log(cao.tipo)
+        cao.latir = function () {
+
+
+            console.log('Cão latindo: Au Au Au Au!')
+
+        }
+
+        cao.latir()
+
+        //acrescenta um novo metodo porem agora no prototipo animal
+
+        gato.__proto__.correr = function(){
+
+            console.log('Animal correndo')
+
+        }
+
+
+        gato.correr()
+        cao.correr()
+
+    </script>
+
+
+
+</body>
+
+</html>
