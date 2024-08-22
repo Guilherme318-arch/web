@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        function mostrar(botao) {
+            const h1 = document.getElementsByTagName('h1')[0]
+            console.log(h1)
+            console.log(botao)
+            const cor = botao.id
+            h1.innerText = botao.innerText
+            h1.style.color = cor
+            botao.style.color = cor
+
+
+
+        }
+        function somar() {
+            const v1 = document.getElementById('v1').value /*1*/
+            const v2 =document.getElementById('v2').value /*2*/
+            const resultado =document.getElementById('resultados')
+            const r = parseFloat(v1) + parseFloat(v2)   //1+2  = '12'//
+            resultado.value = r
+           
+         console.log(r)
+           
+
+        }
+
+    </script>
+</head>
+
+
+
+
+<body>
+
+    <h1>Hello World</h1>
+    <button id="red" onclick="mostrar(this)">Vermelho</button>
+    <button id="blue" onclick="mostrar(this)">Azul</button>
+    <button id="green" onclick="mostrar(this)">Verde</button>
+    <br>
+    <label for="v1">valor 1</label>
+    <input id="v1" type="number">
+
+    <br>
+    <label for="v2">valor 2</label>
+    <input id="v2" type="number">
+
+    <button onclick="somar()">somar</button>
+    <br>
+    <label>resultados:</label>
+    <input id="resultados" type="number" readonly>
+
+</body>
+
+</html>

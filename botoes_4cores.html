@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botoes 4 cores</title>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            const h1 = document.getElementsByTagName('h1')[0]
+            const botoes = document.getElementsByTagName('button')
+            /*percore a coleçao de botões usando= For of*/
+            for (const btn of botoes) {
+            /*atribui uma arrow fuction para cada função */
+                btn.onclick = function () {
+                    const cor = btn.id
+                    h1.innerText = btn.innerText
+                    h1.style.color = cor
+                    btn.style.color = cor
+
+
+                }
+
+            }
+        })
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+    <h1>Hello World</h1>
+    <button id="red">Vermelho</button>
+    <button id="blue">Azul</button>
+    <button id="green">Verde</button>
+    <button id="orange">laranja</button>
+
+
+
+
+
+</body>
+
+</html>
