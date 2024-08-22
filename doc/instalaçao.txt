@@ -1,0 +1,28 @@
+apos criar a pasta com, iniciar o projeto node35;
+
+npm init --yes
+
+
+instalar modulo do MySQKL
+npm install mysql2
+
+
+acrescentar o"type": "module", em package.json (abaixo do main)
+"type": "module",
+
+
+
+
+instalar modulo express
+npm install express
+instalar modulo nodemon para reiniciar o servidor
+npm install  nodemon
+
+adicionar em package json => "scripts": {
+
+     "dev": "nodemon servidor/servidor.js"
+}
+
+
+agora para rodar o servidor usamos :
+npm run dev
